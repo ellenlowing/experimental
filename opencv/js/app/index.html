@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style media="screen">
+      canvas {
+        border: 1px solid black;
+      }
+      .invisible {
+        display: none;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .center-block {
+        display: block;
+        margin: auto;
+      }
+      .row {
+        margin: 10px;
+      }
+      tr td {
+        padding-right: 10px;
+        width: 25%;
+        vertical-align: top;
+        font: 14px 'Lucida Grande', sans-serif;
+      }
+    </style>
+    <title></title>
+  </head>
+  <body>
+  <div id="container">
+    <table cellpadding="1em" cellspacing="0" width="100%" border="0">
+      <tr>
+        <td>
+          <div class="text-center">
+            Canvas
+          </div>
+        </td>
+        <td>
+          <div>Segmentation</div>
+        </td>
+      </tr>=
+      <tr>
+        <td>
+          <canvas class="center-block" id="cameraOutput" width=480 height=0></canvas>
+        </td>
+        <td>
+          <canvas class="center-block" id="canvasOutput" width=480 height=0></canvas>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <canvas class="center-block" id="characterOutput" width=480 height=0></canvas>
+        </td>
+        <td>
+          <canvas class="center-block" id="processOutput" width=480 height=0></canvas>
+        </td>
+      </tr>
+    </table>
+    <div class="invisible">
+      <video id="video" class="hidden">Your browser does not support the video tag.</video>
+    </div>
+  </div>
+  </body>
+  <script type="text/javascript" src="app.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
+  <script>
+    var Module = {
+      wasmBinaryFile: 'https://huningxin.github.io/opencv.js/build/wasm/opencv_js.wasm',
+      _main: function() {opencvIsReady();}
+    };
+  </script>
+  <script async src="https://huningxin.github.io/opencv.js/build/wasm/opencv.js"></script>
+
+</html>

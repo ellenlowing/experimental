@@ -1,0 +1,17 @@
+@ font-face {
+  font-family: 'FoundersGrotesk-Light';
+  src: url('FoundersGrotesk-Light.otf')
+        format('opentype');
+}
+
+.right {
+  background-color: #fff;
+  position:absolute;
+  right:0px;
+  width:300px;
+  padding:8px;
+}
+
+.right p {
+    font-family: 'FoundersGrotesk-Light', sans-serif;
+}
